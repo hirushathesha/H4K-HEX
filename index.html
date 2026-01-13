@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4K - Premium Software & Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <h1 class="loading-logo">H4K</h1>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+                <div class="loading-text">Initializing Systems...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>H4K</h1>
+                <span class="logo-pulse"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active" data-tab="home">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item" data-tab="exe-store">
+                    <a href="#" class="nav-link">EXE Store</a>
+                </li>
+                <li class="nav-item" data-tab="web-packages">
+                    <a href="#" class="nav-link">Web Packages</a>
+                </li>
+                <li class="nav-item" data-tab="projects">
+                    <a href="#" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item" data-tab="feedback">
+                    <a href="#" class="nav-link">Feedback</a>
+                </li>
+                <li class="nav-item" data-tab="login">
+                    <a href="#" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item" data-tab="register">
+                    <a href="#" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item hidden" data-tab="dashboard">
+                    <a href="#" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item hidden" data-tab="admin">
+                    <a href="#" class="nav-link">Admin</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to <span class="neon-text">H4K</span></h1>
+                    <p class="hero-subtitle">Premium Software Solutions & Web Development Services</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showTab('exe-store')">Browse EXE Store</button>
+                        <button class="btn btn-secondary" onclick="showTab('web-packages')">View Packages</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">💻</div>
+                        <h3>Custom Software</h3>
+                        <p>Professional EXE applications</p>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🌐</div>
+                        <h3>Web Development</h3>
+                        <p>Modern responsive websites</p>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🔧</div>
+                        <h3>Tech Solutions</h3>
+                        <p>Innovative digital services</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Software Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXE Store Section -->
+        <section id="exe-store" class="content-section">
+            <div class="section-header">
+                <h2>EXE Software Store</h2>
+                <p>Premium software solutions for your needs</p>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Web Packages Section -->
+        <section id="web-packages" class="content-section">
+            <div class="section-header">
+                <h2>Web Development Packages</h2>
+                <p>Choose the perfect package for your project</p>
+            </div>
+            
+            <div class="packages-container">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Basic</h3>
+                        <div class="price">$299</div>
+                    </div>
+                    <ul class="package-features">
+                        <li>5 Page Website</li>
+                        <li>Responsive Design</li>
+                        <li>Basic SEO</li>
+                        <li>Contact Form</li>
+                        <li>1 Week Delivery</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <button class="btn btn-primary package-btn" onclick="showTab('login')">Order Now</button>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <h3>Pro</h3>
+                        <div class="price">$599</div>
+                    </div>
+                    <ul class="package-features">
+                        <li>10 Page Website</li>
+                        <li>Advanced Responsive</li>
+                        <li>Full SEO Package</li>
+                        <li>Contact & Quote Forms</li>
+                        <li>Basic Admin Panel</li>
+                        <li>3 Days Delivery</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="btn btn-primary package-btn" onclick="showTab('login')">Order Now</button>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Premium</h3>
+                        <div class="price">$999</div>
+                    </div>
+                    <ul class="package-features">
+                        <li>Unlimited Pages</li>
+                        <li>Premium Design</li>
+                        <li>Advanced SEO</li>
+                        <li>All Forms + Chat</li>
+                        <li>Full Admin System</li>
+                        <li>Database Integration</li>
+                        <li>24/7 Support</li>
+                        <li>1 Day Delivery</li>
+                    </ul>
+                    <button class="btn btn-primary package-btn" onclick="showTab('login')">Order Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="section-header">
+                <h2>Our Latest Projects</h2>
+                <p>Showcasing our recent work</p>
+            </div>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="content-section">
+            <div class="section-header">
+                <h2>Client Feedback</h2>
+                <p>What our clients say about us</p>
+            </div>
+            
+            <div class="feedback-controls">
+                <button class="btn btn-secondary" onclick="showFeedbackForm()">Leave Feedback</button>
+            </div>
+            
+            <div class="feedback-container" id="feedback-container">
+                <!-- Feedback will be dynamically loaded here -->
+            </div>
+            
+            <div class="feedback-form-modal" id="feedback-form-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeFeedbackForm()">&times;</span>
+                    <h3>Leave Your Feedback</h3>
+                    <form id="feedback-form">
+                        <input type="text" id="feedback-name" placeholder="Your Name" required>
+                        <div class="rating-input">
+                            <label>Rating:</label>
+                            <div class="stars-input">
+                                <span class="star" data-rating="1">★</span>
+                                <span class="star" data-rating="2">★</span>
+                                <span class="star" data-rating="3">★</span>
+                                <span class="star" data-rating="4">★</span>
+                                <span class="star" data-rating="5">★</span>
+                            </div>
+                        </div>
+                        <textarea id="feedback-comment" placeholder="Your feedback..." required></textarea>
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="content-section">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h2>Login to H4K</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <input type="email" id="login-email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="login-password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Login</button>
+                    </form>
+                    <p class="auth-switch">Don't have an account? <a href="#" onclick="showTab('register')">Register here</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Section -->
+        <section id="register" class="content-section">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h2>Register at H4K</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <input type="text" id="register-username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="register-email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="register-password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Register</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <a href="#" onclick="showTab('login')">Login here</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Dashboard Section -->
+        <section id="dashboard" class="content-section">
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <h2>User Dashboard</h2>
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+                
+                <div class="dashboard-content">
+                    <div class="welcome-message">
+                        <h3>Welcome, <span id="user-name"></span>!</h3>
+                        <p>Manage your purchases and downloads here</p>
+                    </div>
+                    
+                    <div class="dashboard-section">
+                        <h4>Your Purchased Software</h4>
+                        <div id="user-purchases" class="purchases-grid">
+                            <!-- User purchases will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section">
+                        <h4>Payment History</h4>
+                        <div id="payment-history" class="payment-history">
+                            <!-- Payment history will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Panel Section -->
+        <section id="admin" class="content-section">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <h2>Admin Control Panel</h2>
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+                
+                <div class="admin-content">
+                    <div class="admin-tabs">
+                        <button class="admin-tab active" onclick="showAdminTab('products')">Products</button>
+                        <button class="admin-tab" onclick="showAdminTab('users')">Users</button>
+                        <button class="admin-tab" onclick="showAdminTab('feedback')">Feedback</button>
+                        <button class="admin-tab" onclick="showAdminTab('stats')">Statistics</button>
+                    </div>
+                    
+                    <div id="admin-products" class="admin-panel active">
+                        <div class="panel-header">
+                            <h3>Manage Products</h3>
+                            <button class="btn btn-primary" onclick="showAddProductForm()">Add New Product</button>
+                        </div>
+                        <div id="products-table" class="admin-table">
+                            <!-- Products table will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div id="admin-users" class="admin-panel">
+                        <div class="panel-header">
+                            <h3>Manage Users</h3>
+                        </div>
+                        <div id="users-table" class="admin-table">
+                            <!-- Users table will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div id="admin-feedback" class="admin-panel">
+                        <div class="panel-header">
+                            <h3>Manage Feedback</h3>
+                        </div>
+                        <div id="feedback-table" class="admin-table">
+                            <!-- Feedback table will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div id="admin-stats" class="admin-panel">
+                        <div class="panel-header">
+                            <h3>Dashboard Statistics</h3>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card-admin">
+                                <h4>Total Users</h4>
+                                <div class="stat-number" id="total-users">0</div>
+                            </div>
+                            <div class="stat-card-admin">
+                                <h4>Total Products</h4>
+                                <div class="stat-number" id="total-products">0</div>
+                            </div>
+                            <div class="stat-card-admin">
+                                <h4>Total Sales</h4>
+                                <div class="stat-number" id="total-sales">0</div>
+                            </div>
+                            <div class="stat-card-admin">
+                                <h4>Total Revenue</h4>
+                                <div class="stat-number" id="total-revenue">$0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content payment-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h3>Complete Your Purchase</h3>
+            <div class="payment-details">
+                <div class="product-info">
+                    <h4 id="payment-product-name"></h4>
+                    <p id="payment-product-description"></p>
+                    <div class="payment-price">$<span id="payment-product-price"></span></div>
+                </div>
+                <div class="payment-form">
+                    <form id="payment-form">
+                        <input type="text" placeholder="Card Number" required>
+                        <div class="payment-row">
+                            <input type="text" placeholder="MM/YY" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                        <input type="text" placeholder="Cardholder Name" required>
+                        <button type="submit" class="btn btn-primary btn-full">Complete Payment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="add-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddProductModal()">&times;</span>
+            <h3>Add New Product</h3>
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <textarea id="product-description" placeholder="Product Description" required></textarea>
+                <input type="text" id="product-version" placeholder="Version" required>
+                <input type="number" id="product-price" placeholder="Price" step="0.01" required>
+                <input type="url" id="product-download-link" placeholder="Download Link" required>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
